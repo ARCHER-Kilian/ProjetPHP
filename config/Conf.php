@@ -28,13 +28,15 @@ class Conf {
 
   );
 
+
+
   //A modifier en fonction de nos tables
    
-  /*static public function getLogin() {
-    //en PHP l'indice d'un tableau n'est pas forcement un chiffre.
-    return self::$databases['login'];
-    
-  }
+    static public function getLogin(){
+      //en PHP l'indice d'un tableau n'est pas forcement un chiffre.
+      return self::$databases['login'];
+      
+    }
 
   static public function getPassword(){
 
@@ -64,4 +66,4 @@ class Conf {
    
 }
 
-?>*/
+?>

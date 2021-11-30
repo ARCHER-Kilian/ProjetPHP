@@ -22,7 +22,7 @@ class ModelCategorie {
 
 	public static function getAllCategories() {
 	    	$pdo = Model::getPDO();
-	    	$rep = $pdo->query("SELECT * FROM projetPHP_categorie");
+	    	$rep = $pdo->query("SELECT * FROM categorie");
 	    	$rep->setFetchMode(PDO::FETCH_CLASS, 'ModelCategorie');
 	    	$tab_c = $rep->fetchAll();
 	    	return $tab_c;
@@ -30,14 +30,14 @@ class ModelCategorie {
 	}
 
 	public static function getCategorieByName($name) {
-	    $sql = "SELECT * from projetPHP_categorie WHERE cat_name='$name'"; 
+	    $sql = "SELECT * from categorie WHERE cat_name='$name'"; 
 	    $rep = Model::getPDO()->query($sql);
 	    $rep->setFetchMode(PDO::FETCH_CLASS, 'ModelCategorie');
 	    return $rep->fetch();
 	}
 
 	public function saveCategorie() {
-        $pdo = Model::getPDO()->prepare('INSERT INTO projetPHP_categorie VALUES (:id, :cat_name;');
+        $pdo = Model::getPDO()->prepare('INSERT INTO categorie VALUES (:id, :cat_name;');
         
         $values = array(
             "id" => $this->id,

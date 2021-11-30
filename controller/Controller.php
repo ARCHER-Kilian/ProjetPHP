@@ -5,14 +5,18 @@ require_once(File::build_path(array("model","ModelArticle.php")));
 class Controller {
 
 	public static function readAllCategories() {
-	    $tab_c = ModelCategorie::getAllCategories();     //appel au modèle pour gerer la BD
-		require_once(File::build_path(array("view","pages","acceuil.php")));
+	    ControllerArticle::getAllArticle();
   //"redirige" vers la vue
 	}
 
 	public static function readAllArticle() {
-	    $tab_a = ModelArticle::getAllArticle();     //appel au modèle pour gerer la BD
-		require_once(File::build_path(array("view","pages","liste.php")));
+	    	ControllerArticle::getAllArticle();
+
+	}
+
+		public static function readArticle() {
+	    $tab_a = ModelArticle::getArticleByName();     //appel au modèle pour gerer la BD
+		require_once(File::build_path(array("view","pages","description.php")));
   //"redirige" vers la vue
 	}
 }

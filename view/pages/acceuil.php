@@ -16,10 +16,11 @@
         $i = htmlspecialchars($a -> getImage());
         $d = htmlspecialchars($a -> getDesc());
         $p = htmlspecialchars($a -> getPrix());
+        $id = htmlspecialchars($a -> getID());
         echo "
             <button class='btn'>
                 <p>
-                    <a href='index.php?action=readAllArticle'>
+                    <a href='index.php?action=readDesc&id=$id' id='detail'>
                         <img class=imageArticle src='$i'>
                         <div class='name'>
                             $n

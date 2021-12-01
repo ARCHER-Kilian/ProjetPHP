@@ -17,6 +17,17 @@ class ControllerArticle {
   //"redirige" vers la vue
 	}
 
+	public static function readDesc() {
+	    $controller='pages';
+	    $view='detail';
+	    $pagetitle='Detail Article';
+	    require_once(File::build_path(array("view","view.php")));
+
+	}
+
+
+
+
 	public static function contact() {
 	    $tab_a = ModelArticle::selectAll();     //appel au modèle pour gerer la BD
 	    $controller='pages';

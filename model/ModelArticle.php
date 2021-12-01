@@ -42,6 +42,17 @@ class ModelArticle extends Model {
         $pdo->execute($values);
 	}
 
+	public function getDetailArticle($id) {
+        $pdo = Model::getPDO();
+	    	$rep = $pdo->query("SELECT detail FROM $object");
+	    	$rep->setFetchMode(PDO::FETCH_CLASS, 'ModelCategorie');
+	    	$det = $rep->fetchAll();
+	    	return $det;
+
+	}
+
+
+
 	public function  getID(){
 		return $this -> id;
 	}
@@ -64,6 +75,8 @@ class ModelArticle extends Model {
 	public function getPrix(){
 		return $this-> prix;
 	} 
+
+	
 
 }
 ?>

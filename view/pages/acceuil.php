@@ -1,4 +1,4 @@
-
+ 
     <style>
         <?php
             include'CSS/main.css';
@@ -19,7 +19,7 @@
         echo "
             <button class='btn'>
                 <p>
-                    <a href='https://webinfo.iutmontp.univ-montp2.fr/~cornetl/ProjetPHP/index.php?action=readAllArticle'>
+                    <a href='index.php?action=readAllArticle'>
                         <img class=imageArticle src='$i'>
                         <div class='name'>
                             $n
@@ -33,8 +33,10 @@
                     </p>
                 </p>         
                     <hr class='addtocart'>
-                    <div class='add_cart'>   
+                    <div class='add_cart'>
+                    <a href='index.php?action=ajoutPanier'>
                         <input id='addCart' type='submit' value='Add to Cart' required>
+                    </a>
                     </div>
             </button>
             ";

@@ -1,4 +1,4 @@
-<main class="main">
+
 	<h1><strong>FAQ</strong></h1>
 	<h2>Questions Fréquentes</h2>
 	<h3>Comment se faire livrer ?</h3>
@@ -10,4 +10,3 @@
 	<p>Ut eget nunc non quam posuere varius quis eget ex. Nulla at luctus ex. Fusce a dolor condimentum, sagittis ipsum nec, condimentum metus. Curabitur ut nunc mi. Vestibulum ultricies eros vitae lorem blandit vulputate. Morbi egestas rutrum tortor non aliquam. Sed sit amet ornare metus. Proin sagittis porta ex in rhoncus. Aenean auctor, orci rutrum congue pulvinar, massa urna consectetur mi, nec consectetur mi elit vitae mi. Nam pharetra et libero id sollicitudin. Nunc lectus tellus, porttitor eget euismod at, venenatis eget metus. Integer in urna ultrices nunc pellentesque maximus vitae vitae est. Proin lobortis leo ac vehicula varius.</p>
 
 
-</main>

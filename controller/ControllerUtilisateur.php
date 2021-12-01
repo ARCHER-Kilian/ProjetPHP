@@ -1,5 +1,6 @@
 <?php
-    require_once "/home/ann2/cornetl/public_html/ProjetPHP/lib/File.php";
+    $model_path_array = array('lib/File.php');
+    require_once File::build_Path($model_path_array);
     $model_path_array = array('model/ModelUtilisateur.php');
     require_once File::build_Path($model_path_array); // chargement du modèle
 

@@ -45,7 +45,7 @@ class ControllerArticle {
 	    require_once(File::build_path(array("view","view.php")));
 	}
 
-	public static function monCompt() {
+	public static function monCompte() {
 	    $tab_a = ModelArticle::selectAll();     
 	    $controller='pages';
 	    $view='monCompt';
@@ -53,11 +53,19 @@ class ControllerArticle {
 	    require_once(File::build_path(array("view","view.php")));
 	}
 
-	public static function panier() {
+	public static function readPanier() {
 	    $tab_a = ModelArticle::selectAll();     
 	    $controller='pages';
 	    $view='panier';
-	    $pagetitle='Mon Compte';
+	    $pagetitle='Mon Panier';
+	    require_once(File::build_path(array("view","view.php")));
+	}
+
+	public static function ajoutPanier() {
+	    $tab_a = ModelArticle::selectAll();     
+	    $controller='pages';
+	    $view='ajoutPanier';
+	    $pagetitle='Mon Panier';
 	    require_once(File::build_path(array("view","view.php")));
 	}
 

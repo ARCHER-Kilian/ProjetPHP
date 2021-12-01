@@ -13,12 +13,12 @@
             <nav id="nav">
 
                 <div class="items-nav">
-                    <a href="index.php?action=readAllArticle"><img id="logo" src="view/pages/images/logo.png"></a>
+                    <a href="index.php?action=readAllArticle"><img id="logo" src="view/pages/images/Manettelogo.png"></a>
                     <a href="index.php?action=contact">Contact</a>
                     <a href="index.php?action=FAQ">FAQ</a>
                     <a href="index.php?action=signIn">Sign In</a>
-                    <a href="index.php?action=monCompt">Mon Compt</a>
-                    <img class="imgCart" src="view/pages/images/Kartgreen.png" href="index.php?action=panier" class="cart" aria-label="View your shopping cart">
+                    <a href="index.php?action=monCompte">Mon Compte</a>
+                    <a href="index.php?action=readPanier"><img class="imgCart" src="view/pages/images/Kartgreen.png" class="cart" aria-label="View cart"></a>
                 </div>
             </nav>
         </header>

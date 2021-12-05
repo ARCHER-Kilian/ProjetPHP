@@ -1,4 +1,9 @@
- 
+<div class="admin">
+	<a href="index.php?action=deleteArticle" class="block">Enlever un article</a>
+	<br>
+	<br>
+	<a href="index.php?action=ajoutArticle" class="block">Ajouter un article</a>
+</div>
     <style>
         <?php
             include'CSS/main.css';

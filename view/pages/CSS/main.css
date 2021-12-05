@@ -1,7 +1,201 @@
-body{
-    background-color: black;
+.body{
+   background-color: white;
 }
 
-#categories{
+.admin{
+   margin-bottom: 5%;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 32px;
+  background-color: green;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid;
+  border-color: black;
+  text-decoration: none;
+  color: black;
+  font-size: 120%;
+}
+
+a.block:hover {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 32px;
+  background-color: green;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid;
+  border-color: black;
+  text-decoration: none;
+  color: #7FFF00;
+  font-size: 120%;
+}
+
+.main{
+    /*margin-right: 20%;
+    margin-left: 25%;*/
+    background-color: white;
+    padding-top: 6%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.imageArticle{
+	max-height: 60px;
+	max-width: 60px;
+}
+
+.btn{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border-radius: 8px;
+	background-color: white;
+	color: black;
+	border: 2px solid;
+	width: 220px;
+	height: 220px;
+	margin: 1%; 
+}
+
+
+
+#addCart{ 
+  background: green;
+  border-radius: 16px;
+  margin-top: 4%;
+  width: 90%;
+  padding: 4%;
+  border-color: black;
+}
+
+div.listeArticle{
+  text-align: center;
+}
+
+.formContact{
+  text-align: center;
+  margin-top: 5%;
+
+}
+
+.formContact form ul li{
+  padding: 1%;
+}
+
+.formContact form ul li input{
+  width: 80%;
+}
+
+.formContact form ul li textarea{
+  width: 80%;
+}
+
+.formContact form {
+  border: 2px solid;
+  border-radius: 16px;
+  border-color: black;
+  width: 50%;
+}
+
+.separationhr{
+  padding-top: 1%;
+}
+
+.name {
+  font-size: 150%;
+}
+
+.name :hover{
+  color: #7FFF00;
+}
+
+.prix{
+  color: purple;
+}
+
+/*form.recherche{
 	text-align: center;
+}*/
+
+/*.listeArticle :hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	transition: 0.2s linear;
+}*/
+
+
+/*Partie CSS du formulaire de recherche*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+.flexbox {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  margin: 20px;
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 0.5px black);
+}
+
+.search > div:after {
+  content: "";
+  background: black;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(135deg);
+}
+
+.search > div > input {
+  color: black;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px black;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color: black;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 250px;
 }

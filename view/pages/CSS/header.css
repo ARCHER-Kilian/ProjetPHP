@@ -1,64 +1,46 @@
 #logo{
      width: 3%;
      height: auto;
-     margin-left: 1%;
-     : center;
-    
+     position: center;
 }
- 
-nav{
+
+#nav{
      width: 100%;
      height: auto;
      text-align: center;
 }
 
-hr{
-    color: green;
+.header{
+    background-color: #24262b;
+    width: 100%;
+    position: fixed;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
 }
+
 
 
 .items-nav a{
      color:green;
-     font-size: 100%;
+     font-size: 150%;
      text-decoration: none;
      font-weight: bold;
      margin:2%;
+     text-align: center;
      
 }
  
 .items-nav :hover{
      color: #652CB3;
-     font-size: 100%;
+     font-size: 170%;
      text-decoration: none;
      cursor: pointer;/*devient main quand survole*/
      transition: 0.2s linear;/*delai*/
      justify-content: space-around;
-
-
 }
 
-
-@media only screen and (max-width: 1500px) and (min-width: 1051px){
-
-}
-@media only screen and (max-width: 1050px) and (min-width: 800px){
-
-}
-@media only screen and (max-width: 799px) and (min-width: 600px){
-    .logo{
-        display: none;
-    }
-
-    .nav{
-        display: inline;
-    }
-}
-@media only screen and (max-width: 599px) and (min-width: 100px){
-    .logo{
-        display: none;
-    }
-
-    .nav{
-        display: inline;
-    }
+.imgCart{
+     max-height: 2%;
+     max-width: 2%;
+     margin-left: 2%;
 }

@@ -1,0 +1,1 @@
+SUCCES de supression d'article

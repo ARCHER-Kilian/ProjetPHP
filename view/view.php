@@ -14,12 +14,31 @@
             <nav id="nav">
 
                 <div class="items-nav">
-                    <a href="index.php?action=readAllArticle"><img id="logo" src="view/pages/images/Manettelogo.png"></a>
-                    <a href="index.php?action=contact">Contact</a>
-                    <a href="index.php?action=FAQ">FAQ</a>
-                    <a href="index.php?action=signIn">Sign In</a>
-                    <a href="index.php?action=monCompte">Mon Compte</a>
-                    <a href="index.php?action=readPanier"><img class="imgCart" src="view/pages/images/Kartgreen.png" class="cart" aria-label="View cart"></a>
+                     <?php
+                     if (isset($_COOKIE['id']) && isset($_COOKIE['password'])) {
+                         if ($_COOKIE['id'] == "admin" && $_COOKIE['password'] == "admin") {
+                            echo "<a href='index.php?action=readAdmin'><img id='logo' src='view/pages/images/Manettelogo.png'></a>";
+                        }else{
+                            echo "<a href='index.php?action=readAllArticle'><img id='logo' src='view/pages/images/Manettelogo.png'></a>
+                                <a href='index.php?action=contact'>Contact</a>
+                                <a href='index.php?action=FAQ'>FAQ</a>";
+                        }
+                     }else{
+                        echo "<a href='index.php?action=readAllArticle'><img id='logo' src='view/pages/images/Manettelogo.png'></a>
+                                <a href='index.php?action=contact'>Contact</a>
+                                <a href='index.php?action=FAQ'>FAQ</a>";
+                     }    
+                    ?>
+                    <?php
+                        if (isset($_COOKIE['id'])) {
+                            echo "<a href='index.php?action=logout'>Logout</a>
+                                <a href='index.php?action=monCompte'>Mon Compte</a>
+                                <a href='index.php?action=readPanier'><img class='imgCart' src='view/pages/images/Kartgreen.png' class='cart' aria-label='View cart'></a>";
+                        }else if (isset($_COOKIE['id']) !== "admin") {
+                            echo "<a href='index.php?action=connect'>Connect</a>";
+                            echo "<a href='index.php?action=signUp'>S'Inscrire</a>";
+                        }       
+                    ?>
                 </div>
             </nav>
         </header>

@@ -1,10 +1,13 @@
 <?php
+$d = $_POST['detail'];
+	var_dump($d);
+	die;
 
-if (iiset($_SESSION['cart'])) {
+if (isset($_SESSION['cart'])) {
 	$_SESSION['cart'] = array() ;
 }
 
-$_SESSION['cart'][$_POST()];
+array_push($_SESSION['cart'], $_GET['id']);
 
 ?>
 <p> Produit a été ajouté a votre panier 

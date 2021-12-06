@@ -157,7 +157,7 @@ class Model {
     
 
 
-    public static function delete($primary_value){
+  /*  public static function delete($primary_value){
             try {
         $primary_key = static::$primary;
         $table_name = static::$object;
@@ -180,7 +180,8 @@ class Model {
                 return false;
                 die();
             }
-        }
+        }*/
+
 
 	// Connexion à la base de données            
 	// Le dernier argument sert à ce que toutes les chaines de caractères 

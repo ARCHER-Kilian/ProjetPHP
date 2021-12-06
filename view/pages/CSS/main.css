@@ -2,6 +2,62 @@
    background-color: white;
 }
 
+.admin{
+   margin-bottom: 5%;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 32px;
+  background-color: green;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid;
+  border-color: black;
+  text-decoration: none;
+  color: black;
+  font-size: 120%;
+}
+
+a.block:hover {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 32px;
+  background-color: green;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid;
+  border-color: black;
+  text-decoration: none;
+  color: #7FFF00;
+  font-size: 120%;
+}
+
+input.block:hover {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 32px;
+  background-color: green;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid;
+  border-color: black;
+  text-decoration: none;
+  color: #7FFF00;
+  font-size: 120%;
+}
+
+
 .main{
     /*margin-right: 20%;
     margin-left: 25%;*/

@@ -31,7 +31,7 @@
 }
  
 .items-nav :hover{
-     color: #652CB3;
+     color: #7FFF00;
      font-size: 170%;
      text-decoration: none;
      cursor: pointer;/*devient main quand survole*/

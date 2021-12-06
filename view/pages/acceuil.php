@@ -14,13 +14,14 @@
         foreach ($tab_a as $a){
         $n = htmlspecialchars($a -> getName());
         $i = htmlspecialchars($a -> getImage());
-        $d = htmlspecialchars($a -> getDesc());
+        $d = htmlspecialchars($a -> getDescr());
         $p = htmlspecialchars($a -> getPrix());
         $id = htmlspecialchars($a -> getID());
         echo "
             <button class='btn'>
                 <p>
-                    <a href='index.php?action=readDesc&id=$id' id='detail'>
+                <form methode='GET' action='index.php?action=readDescr'>
+                    <a href='index.php?action=readDescr&id=$id' id='detail' name='detail'>
                         <img class=imageArticle src='$i'>
                         <div class='name'>
                             $n
@@ -29,9 +30,10 @@
                         <div class='prix'>
                             $p €
                         </div>
-                    <p>
-                        $d
-                    </p>
+                        <p>
+                            $d
+                
+                </form>       </p>
                 </p>         
                     <hr class='addtocart'>
                     <div class='add_cart'>
@@ -43,4 +45,4 @@
             ";
         }
     ?>
-    </div>
+    </div>  

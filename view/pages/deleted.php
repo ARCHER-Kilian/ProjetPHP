@@ -1,1 +1,1 @@
-deleted
+SUCCES de supression d'article

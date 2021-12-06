@@ -6,10 +6,15 @@ require_once(File::build_path(array("controller","ControllerUtilisateur.php")));
 
 if (isset($_GET['action'])){
 	$action = $_GET['action'];
+} else if (isset($_COOKIE['id'])) {
+	if ($_COOKIE['id'] == "admin" && $_COOKIE['password'] == "admin") {
+		$_action = 'readAdmin';
+	}else{
+		$action = 'readAllArticle'; 
+	}
 } else {
 	$action = 'readAllArticle'; 
 }
- 
 
 $controller_default = 'Article';
 if(isset($_GET['controller'])){ // On recupère le controleur dans l'URL

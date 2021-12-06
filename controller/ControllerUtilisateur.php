@@ -55,13 +55,17 @@
             require (File::build_Path($path_array));
         }
 
-        public static function created(){ // Utilisateur créé
+        public static function createdU(){ // Utilisateur créé
             $data = array(
-                "login" => $_POST['login'],
+                "id" => $_POST['id'],
                 "nom" => $_POST['nom'],
                 "prenom" => $_POST['prenom'],
+                "mdp" => $_POST['mdp'],
+                "numtel" => $_POST['numtel'],
+                "email" => $_POST['enmail'],
+                "adressePostale" => $_POST['adressePostale'],
             );
-            $utilisateur = new ModelUtilisateur($data['login'], $data['nom'], $data['prenom']);
+            $utilisateur = new ModelUtilisateur($data['id'], $data['nom'], $data['prenom'], $data['mdp'], $data['numtel'], $data['email'], $data['adressePostale']);
             $test = $utilisateur->save();
             if ($test === false){
                 $view = 'erreur/erreurCreated';
@@ -70,7 +74,7 @@
                 require File::build_Path($path_array); // On affiche la vue errorCreated
 
             } else {
-                $view = 'created';
+                $view = 'inscris';
                 $pagetitle = 'Utilisateur créé';
                 $path_array = array('view/view.php');
                 require (File::build_Path($path_array)); // On affiche la vue created 

@@ -1,4 +1,4 @@
-    <form method="post" action="index.php?action=created">
+    <form method="post" action="index.php?action=createdA">
         <fieldset>
             <legend>MON FORMULAIRE A MOI :</legend>
             <p>

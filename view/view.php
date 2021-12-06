@@ -36,6 +36,7 @@
                                 <a href='index.php?action=readPanier'><img class='imgCart' src='view/pages/images/Kartgreen.png' class='cart' aria-label='View cart'></a>";
                         }else if (isset($_COOKIE['id']) !== "admin") {
                             echo "<a href='index.php?action=connect'>Connect</a>";
+                            echo "<a href='index.php?action=signUp'>S'Inscrire</a>";
                         }       
                     ?>
                 </div>

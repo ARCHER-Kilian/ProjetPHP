@@ -10,8 +10,6 @@
         private $numtel;
         private $email;
         private $adressePostale;
-        private $panier;
-        private $commande;
 
 
         protected static $object = 'utilisateur';
@@ -45,15 +43,6 @@
             return $this->adressePostale;
         }
 
-
-        public function getPanier(){
-            return $this->panier;
-        }
-
-        public function getCommande(){
-            return $this->commande;
-        }
-
         public function setID($id){
             $this->login = $id;
         }
@@ -82,16 +71,8 @@
             $this->adressePostale = $ap;
         }
 
-        public function setCommande($c){
-            $this->commande = $c;
-        }
-
-        public function setPanier($pa){
-            $this->panier = $pa;
-        }
-
-        public function __construct($id = NULL, $n = NULL , $p = NULL){
-            if (!is_null($id) && !is_null($n) && !is_null($p) && !is_null($mdp) && !is_null($nt) && !is_null($e) && !is_null($ap) && !is_null($pa) && !is_null($c)){
+        public function __construct($id = NULL, $n = NULL , $p = NULL, $mdp = NULL, $nt = NULL, $e = NULL, $ap = NULL){
+            if (!is_null($id) && !is_null($n) && !is_null($p) && !is_null($mdp) && !is_null($nt) && !is_null($e) && !is_null($ap)){
 
                 $this->id = $id;
                 $this->nom = $n;
@@ -100,8 +81,6 @@
                 $this->numtel = $nt;
                 $this->email = $e;
                 $this->adressePostale = $ap;
-                $this->panier = $pa;
-                $this->commande = $c;
             }
         }
 
@@ -132,6 +111,21 @@
             return $det;
     }
 
+    public function save() {
+        $pdo = Model::getPDO()->prepare('INSERT INTO utilisateur VALUES (:idU, :nomU, :prenomU, :mdpU, :numtelU, :emailU, :adressePostaleU);');
+        
+        $values = array(
+                "idU" => $this->id,
+                "nomU" => $this->nom,
+                "prenomU" => $this->prenom,
+                "mdpU" => $this->mdp,
+                "numtelU" => $this->numtel,
+                "emailU" => $this->email,
+                "adressePostaleU" => $this->adressePostale,
+        );
+        $pdo->execute($values);
+    }
+
         public function toArray(){
             $data = array(
 
@@ -142,10 +136,8 @@
                 "numtel" => $this->getNumtel(),
                 "email" => $this->getEmail(),
                 "adressePostale" => $this->getAdressePostale(),
-                "panier" => $this->getPanier(),
-                "commande" => $this->getCommande(),
             );
-            var_dump($ata);
+            var_dump($data);
             return $data;
         }
 

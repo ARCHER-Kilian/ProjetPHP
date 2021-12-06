@@ -25,7 +25,36 @@ class ControllerArticle {
 	    require_once(File::build_path(array("view","view.php")));
 	}
 
+	public static function readCart() {
+	    $tab_a = ModelArticle::selectAll();     //appel au modèle pour gerer la BD
+	    $controller='pages';
+	    $view='panier';
+	    $pagetitle='Panier';
+	    require_once(File::build_path(array("view","view.php")));
+	}
+
 	public static function readDescr() {
+		$id = $_GET['id'];
+		$tab_d = ModelArticle::getDescByID($id);
+	    $controller='pages';
+	    $view='detail';
+	    $pagetitle='Detail Article';
+	    require_once(File::build_path(array("view","view.php")));
+
+	}
+
+	public static function ajoutPanier() {
+	    $tab_a = ModelArticle::selectAll();     
+	    $controller='pages';
+	    $view='ajoutPanier';
+	    $pagetitle='Mon Panier';
+	    require_once(File::build_path(array("view","view.php")));
+	}
+
+
+	public static function readDescrByID($id) {
+
+		
 		$tab_d = ModelArticle::getDescr();
 	    $controller='pages';
 	    $view='detail';
@@ -34,9 +63,18 @@ class ControllerArticle {
 
 	}
 
+
 	public static function connect(){ 
             $view = 'connect';
             $pagetitle = "Connexion";
+	    	$controller='pages';
+            $path_array = array('view/view.php');
+            require (File::build_Path($path_array));
+        }
+
+    public static function TOC(){ 
+            $view = 'TermsAndConditions';
+            $pagetitle = "TOC";
 	    	$controller='pages';
             $path_array = array('view/view.php');
             require (File::build_Path($path_array));
@@ -61,6 +99,14 @@ class ControllerArticle {
     public static function logout(){ 
             $view = 'logout';
             $pagetitle = "acceuil";
+	    	$controller='pages';
+            $path_array = array('view/view.php');
+            require (File::build_Path($path_array));
+        }
+
+    public static function signUp(){ 
+            $view = 'inscription';
+            $pagetitle = "Inscription";
 	    	$controller='pages';
             $path_array = array('view/view.php');
             require (File::build_Path($path_array));
@@ -112,13 +158,6 @@ class ControllerArticle {
 	    require_once(File::build_path(array("view","view.php")));
 	}
 
-	public static function ajoutPanier() {
-	    $tab_a = ModelArticle::selectAll();     
-	    $controller='pages';
-	    $view='ajoutPanier';
-	    $pagetitle='Mon Panier';
-	    require_once(File::build_path(array("view","view.php")));
-	}
 
 	public static function error(){ // Erreur de base
 		$tab_a = ModelArticle::selectAll();  
@@ -144,7 +183,7 @@ class ControllerArticle {
     require (File::build_Path($path_array));
 	}
 
-    public static function created(){ 
+    public static function createdA(){ 
     	$id = $_POST['idArt'];
       	$n = $_POST['name'];
         $cat = $_POST['CAT'];
@@ -167,6 +206,34 @@ class ControllerArticle {
             require (File::build_Path($path_array));  
         }
     }
+
+      public static function createdU(){
+                                // Utilisateur créé
+                $idU = $_POST['id'];
+                $nomU = $_POST['nom'];
+                $prenomU = $_POST['prenom'];
+                $mdpU = $_POST['mdp'];
+                $numtelU = $_POST['numtel'];
+                $emailU = $_POST['email'];
+                $adpoU = $_POST['adpo'] ;
+
+            $utilisateur = new ModelUtilisateur($idU, $nomU, $prenomU, $mdpU, $numtelU, $emailU, $adpoU);
+            $test = $utilisateur->save();
+             $controller='pages';
+            if ($test === false){
+                $view = 'erreur/erreurCreated';
+                $pagetitle = "Erreur création d'un utilisateur";
+                $path_array = array('view/view.php');
+                require File::build_Path($path_array); // On affiche la vue errorCreated
+
+            } else {
+                $view = 'inscris';
+                $pagetitle = 'Utilisateur créé';
+                $path_array = array('view/view.php');
+                require (File::build_Path($path_array)); // On affiche la vue created 
+                
+            }
+        }
 
     public static function deleted(){ 
     	$id = $_POST['idArt'];

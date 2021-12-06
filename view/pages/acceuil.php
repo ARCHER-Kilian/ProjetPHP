@@ -29,18 +29,21 @@
                         <div class='prix'>
                             $p €
                         </div>
-                    <p>
-                        $d
-                    </p>
-                </p>         
+                        <p>
+                            $d
+                
+                         </p> 
+
                     <hr class='addtocart'>
                     <div class='add_cart'>
-                    <a href='index.php?action=ajoutPanier'>
-                        <input id='addCart' type='submit' value='Add to Cart' required>
+                    <a href='index.php?action=ajoutPanier&Aid=$id' name='cart' id='cart'>
+                        <input id='addCart' type='submit' value='Add to Cart' name='cart' required>
                     </a>
                     </div>
+
+                </p>
             </button>
             ";
         }
     ?>
-    </div>
+    </div>  

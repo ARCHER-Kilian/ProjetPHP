@@ -1,10 +1,11 @@
 <?php
+$c = $_GET['Aid'];
 
-if (isset($_SESSION['cart'])) {
-	$_SESSION['cart'] = array() ;
+if (!isset($_SESSION['Aid'])) {
+	$_SESSION['Aid'] = array();
 }
 
-$_SESSION['cart'][$_POST()];
+array_push($_SESSION['Aid'], $_GET['Aid']);
 
 ?>
 <p> Produit a été ajouté a votre panier 

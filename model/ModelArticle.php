@@ -78,7 +78,7 @@ class ModelArticle extends Model {
 
 	public static function getDescByID($id) {
             $pdo = Model::getPDO();
-            $rep = $pdo->query("SELECT descr FROM article WHERE id = '$id'");
+            $rep = $pdo->query("SELECT * FROM article WHERE id = '$id'");
             $rep->setFetchMode(PDO::FETCH_CLASS, 'ModelArticle');
             $det = $rep->fetchAll();
           /*  var_dump($det, 'SELECT descr FROM article WHERE id = "$id"');

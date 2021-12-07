@@ -1,6 +1,5 @@
 <?php 
 
-<<<<<<< HEAD
 	$id = $_GET['id'];
 	
 
@@ -26,16 +25,5 @@
             </div>
         ";
 	}
-=======
-	$d = $_POST['detail'];
-	var_dump($d);
-	die;
-
-	
-	/*$descr = ModelArticle::getDescByID($d);
-	foreach ($tab_d as $descr){
-		echo "$descr"
-	}*/
->>>>>>> 95eaae1f7ca617f4f9ec0ed2f12e79b4b9b0858a
 
 ?>

@@ -20,10 +20,6 @@
         echo "
             <button class='btn'>
                 <p>
-<<<<<<< HEAD
-=======
-                <form methode='GET' action='index.php?action=readDescr'>
->>>>>>> 95eaae1f7ca617f4f9ec0ed2f12e79b4b9b0858a
                     <a href='index.php?action=readDescr&id=$id' id='detail' name='detail'>
                         <img class=imageArticle src='$i'>
                         <div class='name'>
@@ -36,13 +32,8 @@
                         <p>
                             $d
                 
-<<<<<<< HEAD
                          </p> 
 
-=======
-                </form>       </p>
-                </p>         
->>>>>>> 95eaae1f7ca617f4f9ec0ed2f12e79b4b9b0858a
                     <hr class='addtocart'>
                     <div class='add_cart'>
                     <a href='index.php?action=ajoutPanier&Aid=$id' name='cart' id='cart'>
